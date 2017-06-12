@@ -1,0 +1,79 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+
+% no word splitting
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% every section on a new page
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage{bm}
+
+% includegraphics
+\usepackage{graphicx}
+
+%Matrices
+\usepackage{amsmath}
+\usepackage{commath}
+
+%Subfigure
+\usepackage{subcaption}
+\newcommand{\matr}[1]{\bm{#1}}
+
+%No indent in a new paragraph
+\usepackage[parfill]{parskip}
+
+\begin{document}
+	
+	\section*{Task \#1}
+	
+	Let's say $f(t)=\sum_{i=1}^{3}y_i(t)$ if $t\geq 0$! Then 
+	\begin{equation}
+		f(t)=y_1(t)+y_2(t)+y_3(t)\,,
+	\end{equation}
+	and
+	\begin{equation}
+	\dot{f}(t)=\dot{y_1}(t)+\dot{y_2}(t)+\dot{y_3}(t)\,.
+	\end{equation}
+	The time derivatives are know from the given system. Let's substitute them back!
+	\begin{equation}
+	\dot{f}(t)=-\alpha y_1+\beta y_2y_3+\alpha y_1-\beta y_2y_3\gamma -y_{2}^2+y_{2}^2
+	\label{eq:fdot}	
+	\end{equation}
+	From equation \ref{eq:fdot} it is clear that $\dot{f}(t)\equiv 0$, consequently $f(t)$ is a constant function. We know from the inital conditions that
+	\begin{equation}
+		f(0)=y_1(0)+y_2(0)+y_3(0)=1+0+0=1
+	\end{equation}
+	Since $f$ is a constant function, $f(t)=f(0)=1$.
+	
+	We can find the steady state if we solve
+	\begin{equation}
+		\matr{\dot{y}}=\matr{0} \,,
+	\end{equation}
+	which means these three equations
+	\begin{equation}
+		\begin{aligned}
+		-\alpha y_1 + \beta y_2 y_3 = 0 \\
+		\alpha y_1 - \beta y_2 y_3 - \gamma y_2^2 = 0 \\
+		\gamma y_2^2 = 0
+		\end{aligned} \,.
+	\end{equation}
+	From the third equation we obtain $y_2=0$. If $y_2=0$ then $y_1=0$ according to the first equation. $y_3$ could be anything, however we know that $\sum_{i=1}^{3}y_i(t)=1$. Since $y_1=y_2=0$, $y_3$ must equal to 1. So the steady state is
+	$$
+	\matr{y_s}=\begin{pmatrix}
+		0 \\ 
+		0\\ 
+		1
+	\end{pmatrix}
+	$$
+
+	\section*{Task \#2}
+	
+	
+	\section*{Task \#3}
+	
+\end{document}
