@@ -48,7 +48,7 @@ legend('y_1 ode23tb','y_2 ode23tb','y_3 ode23tb');
 
 % disp('Time for ode45');
 % tic
-% [t,Y45] = ode45(@Robertson,[intervalStarts,intervalEnds],[1;0;0]);
+% [t,Y45] = ode45(@HRobertson,[intervalStarts,intervalEnds],[1;0;0]);
 % toc
 % 
 % subplot(2,2,4);
