@@ -2,6 +2,9 @@ Solution of Robertson chemical system with stiff and non-stiff solvers and Runge
 
 The following ODE system due to H. Robertson models a chemical reaction system and has been used as test problem for stiff solvers
 
+Inline-style: 
+![alt text](https://github.com/ngergo100/Robertson/Task.png "Logo Title Text 1")
+
         y ̇1 = − α*y1 + β*y2*y3
         y ̇2 = α*y1 - β*y2*y3 - γ*y2^2
         y ̇3 = γ*y2^2
